@@ -17,7 +17,7 @@ Deps
 
 *	Good old [mplayer](http://www.mplayerhq.hu/) does the streaming and playback.
 *	Interface written in pretty basic (< 5) PHP.
-*	It needs \*nixy PHP stuff, like `posix\_mkfifo` (and support for FIFOs, of course).
+*	It needs \*nixy PHP stuff, like `posix_mkfifo` (and support for FIFOs, of course).
 *	\*nixy (or POSIXy?) stuff like `kill`, `ps`, `tee`.
 *	ALSA for volume control (`amixer` shell call)
 *	bash to wrap up the piping.
@@ -55,7 +55,7 @@ Dumping
 	There's the mp3, obviously, and a .txt file with the timestamped playlist.
 *	The `latest.*` symlinks point to the latest dump's files.
 *	All dumps older than 24h are garbage-collected/removed upon (any) station start.
-*	When I want to save a song, I open the `latest.mp3` from the cifs-mounted<sup>1</sup> dumps directory in [mp3splt-gtk](http://mp3splt.sourceforge.net/mp3splt_page/home.php)<sup>2</sup>, set the split-points<sup>3</sup>, set the [file name]<sup>4</sup> and save it!
+*	When I want to save a song, I open the `latest.mp3` from the cifs-mounted<sup>1</sup> dumps directory in [mp3splt-gtk](http://mp3splt.sourceforge.net/mp3splt_page/home.php)<sup>2</sup>, set the split-points<sup>3</sup>, set the file name<sup>4</sup> and save it!
 
 <sup>1</sup> I do it manually ATM. `smb://` in KDE copies the whole file to `/tmp`, `.gvfs` has serious problems in Ubuntu 12. SSHFS is ok, too, but the Raspi seems to struggle with the encryption overhead.  
 <sup>2</sup> No re-encoding!  
@@ -104,4 +104,4 @@ Please
 ======
 
 *	donate to [WFMU](http://www.wfmu.org/). They're so good.
-*	become a “friend” (=donate monthly to) of [Byte.FM](http://byte.fm/). You can stream their archive the, so no need for dumping anymore :)
+*	become a “friend” (=donate monthly to) of [Byte.FM](http://byte.fm/) so you can stream their archive, so no need for dumping anymore :)
