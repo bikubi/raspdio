@@ -30,11 +30,15 @@
 		else {
 			echo "mkfifo $fifo: ".b(posix_mkfifo($fifo,0644)).n;
 		}
+		/* realpath returns no trailing /, if omitted, find finds the directory itself */
+		/* ctime +0 finds files older than one day; plus = greater than */
+		$gccmddump = 'find '.escapeshellarg(realpath($dumpdir)).'/ -ctime +0 -delete';
+		$gccmdicy = 'find '.escapeshellarg(realpath($icydir)).'/ -ctime +0 -delete';
 		echo "gc: "
-			."dump: ".exec('find '.escapeshellarg($dumpdir).' -ctime +0 -delete',$null,$cleanupdump)
-			.$cleanupdump
-			." icy: ".exec('find '.escapeshellarg($icydir).' -ctime +0 -delete',$null,$cleanupicy)
-			.$cleanupicy
+			."dump: ".exec($gccmddump, $null, $cleanupdump)
+			.$cleanupdump."<!-- $gccmddump -->".n
+			." icy: ".exec($gccmdicy, $null, $cleanupicy)
+			.$cleanupicy."<!-- $gccmdicy -->"
 			.n;
 		echo "unlink icylatest $icylatest: ".
 			b(unlink($icylatest)).n;
