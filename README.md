@@ -19,6 +19,7 @@ Deps
 *	Interface written in pretty basic (< 5) PHP.
 *	It needs \*nixy PHP stuff, like `posix_mkfifo` (and support for FIFOs, of course).
 *	\*nixy (or POSIXy?) stuff like `kill`, `ps`, `tee`.
+*	ts
 *	ALSA for volume control (`amixer` shell call)
 *	bash to wrap up the piping.
 *	I run it on [lighttpd](http://www.lighttpd.net/) with PHP-CGI.
@@ -45,7 +46,7 @@ Playback
 3.	You can stop playback there, too. Starting a different station will stop the current station, too.
 4.	At the top, there's a volume control bar (measured in dBs, really superugly ATM).
 5.	Debug info is all over the place.
-6.	There's a playlist at the bottom (provided your station sends info). Currently it does not auto-update (or scroll down to the bottom) so right-click-frame-reload it and scroll, scroll, scroll :)
+6.	There's a playlist at the bottom (provided your station sends info), with links to search the song on Google or YouTube.
 
 Dumping
 -------
@@ -84,11 +85,11 @@ A whole lot.
 *	Nicer interface. Way nicer.
 *	Better volume control
 *	Playlist interface
-	*	Auto-reload + scroll to the bottom
-	*	AJAXify
-	*	Better processing (remove mplayer garbage, `uniq`ify as some stations repeat song info)
+	*	<s>Auto-reload + scroll to the bottom</s>
+	*	<s>AJAXify</s>
+	*	<s>Better processing (remove mplayer garbage, `uniq`ify as some stations repeat song info)</s>
 	*	Possibility to bookmark songs
-	*	Automatic links to Youtube, Dailymotion, Google Video etc.
+	*	<s>Automatic links to Youtube, Dailymotion, Google Video etc.</s>
 *	Handle pls/m3u instead of direct links, which may change. 
 *	Better “splitability”
 	*	Automatic cue/split files
