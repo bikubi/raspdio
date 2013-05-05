@@ -147,7 +147,7 @@ header('Content-type: text/html; charset=utf-8');
 					stations = <?=json_encode($stations)?>,
 					runningstation = <?=b($runningstation)?>,
 					stationre = runningstation ? new RegExp(stations[runningstation].re) : /.*/,
-					linere = /(\w+ \d\d \d\d:\d\d:\d\d) ICY Info: StreamTitle=\'(.*)\';(StreamUrl=\'\')?/;
+					linere = /(\w+ \d\d \d\d:\d\d:\d\d) ICY Info: StreamTitle=\'(.*?)(\';StreamUrl=\')?\'/;
 				function refreshplaylist () {
 					$.ajax({
 						url: 'dump/latest.txt',
