@@ -115,10 +115,10 @@ header('Content-type: text/html; charset=utf-8');
 		<title>raspdio</title>
 		<style type="text/css">
 			.std {
-				max-height: 6em;
-				overflow-y: scroll;
+				font-size: 80%;
 			}
 		</style>
+		<link rel="shortcut icon" type="image/x-icon" href="./raspdio.ico" />
 	</head>
 	<body>
 		<div id="vol">
@@ -150,17 +150,11 @@ header('Content-type: text/html; charset=utf-8');
 			if($start!==false) start($start); 
 			ps();
 		?>
-		<h1>stdout</h1>
-		<pre class="std"><?php readfile('/tmp/b1'); ?></pre>
-
-		<h1>stderr</h1>
-		<pre class="std"><?php readfile('/tmp/b2'); ?></pre>
 		<table>
 			<caption>stations</caption>
 			<thead>
 				<th>name</th>
 				<th>running</th>
-				<th>dumps</th>
 			</thead>
 			<tbody>
 <?php
@@ -177,13 +171,19 @@ header('Content-type: text/html; charset=utf-8');
 		else {
 			echo "<td><a href=\".?start=$station\">start</a></td>";
 		}
-		echo "<td>todo</td>";
 		echo "</tr>";
 	}
 ?>
 			</tbody>
 		</table>
 		<iframe src="<?=$icylatest?>"></iframe>
+		<div class="std">
+			<h1>stdout</h1>
+			<pre class="std"><?php readfile('/tmp/b1'); ?></pre>
+
+			<h1>stderr</h1>
+			<pre class="std"><?php readfile('/tmp/b2'); ?></pre>
+		</div>
 	</body>
 	<script type="text/javascript">
 	/* <![CDATA[ */
