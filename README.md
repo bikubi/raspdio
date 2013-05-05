@@ -85,11 +85,11 @@ A whole lot.
 *	Nicer interface. Way nicer.
 *	Better volume control
 *	Playlist interface
-	*	<s>Auto-reload + scroll to the bottom</s>
-	*	<s>AJAXify</s>
-	*	<s>Better processing (remove mplayer garbage, `uniq`ify as some stations repeat song info)</s>
+	*	<strike>Auto-reload + scroll to the bottom</strike>
+	*	<strike>AJAXify</strike>
+	*	<strike>Better processing (remove mplayer garbage, `uniq`ify as some stations repeat song info)</strike>
 	*	Possibility to bookmark songs
-	*	<s>Automatic links to Youtube, Dailymotion, Google Video etc.</s>
+	*	<strike>Automatic links to Youtube, Dailymotion, Google Video etc.</strike>
 *	Handle pls/m3u instead of direct links, which may change. 
 *	Better “splitability”
 	*	Automatic cue/split files
