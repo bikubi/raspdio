@@ -206,6 +206,7 @@ header('Content-type: text/html; charset=utf-8');
 					},3000);
 				}
 				refreshplaylist();
+				$('#playlist button').on('click',refreshplaylist);
 				window.setInterval(refreshplaylist, 60000);
 				console.log('raspdio, hello, hello world');
 			});	
@@ -306,7 +307,7 @@ header('Content-type: text/html; charset=utf-8');
 		<!--<iframe src="<?=$icylatest?>"></iframe>-->
 
 		<table id="playlist">
-			<caption>playlist</caption>
+			<caption>playlist <button>refresh</button></caption>
 			<tbody></tbody>
 		</table>
 		<div class="std">
