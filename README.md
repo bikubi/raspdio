@@ -58,7 +58,7 @@ Dumping
 *	All dumps older than 24h are garbage-collected/removed upon (any) station start.
 *	When I want to save a song, I open the `latest.mp3` from the cifs-mounted<sup>1</sup> dumps directory in [mp3splt-gtk](http://mp3splt.sourceforge.net/mp3splt_page/home.php)<sup>2</sup>, set the split-points<sup>3</sup>, set the file name<sup>4</sup> and save it!
 
-<sup>1</sup> I do it manually ATM. `smb://` in KDE copies the whole file to `/tmp`, `.gvfs` has serious problems in Ubuntu 12. SSHFS is ok, too, but the Raspi seems to struggle with the encryption overhead.  
+<sup>1</sup> Via fstab/cifs-utils. `smb://` in KDE copies the whole file to `/tmp`, `.gvfs` has serious problems in Ubuntu 12. SSHFS is ok, too, but the Raspi seems to struggle with the encryption overhead.  
 <sup>2</sup> No re-encoding!  
 <sup>3</sup> Manually, which can be a drag, but mp3splt handles it quite well. Automatic splitpoints from playlist roadmapped.  
 <sup>4</sup> Automatic file name roadmapped as well.  
