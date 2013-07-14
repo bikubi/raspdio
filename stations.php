@@ -14,6 +14,11 @@ $stations=array(
 		'uri' => 'http://rbb.ic.llnwd.net/stream/rbb_radioeins_mp3_m_a',
 		'cache' => 512,
 		're' => '(.*) \- (.*)'
+	),
+	'fm4' => array(
+		'uri' => 'http://mp3stream1.apasf.apa.at:8000/',
+		'cache' => 512,
+		're' => '(.*) \- (.*)'
 	)
 );
 ?>
